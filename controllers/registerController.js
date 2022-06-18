@@ -75,16 +75,7 @@ class RegisterController {
         `,
       });
 
-      // const sendEmail = async (req, res) => {
-      //   let emailTransporter = await createTransporter();
-      //   await emailTransporter.sendMail({
-      //     subject: "Verfiy you Email!",
-      //     to: "karannayak0420@gmail.com",
-      //     from: process.env.EMAIL,
-      //   });
-      // };
-
-      // why it doesn't work this way ??
+     
     } catch (err) {
       console.log("SEND MAIL ERROR", err);
     }
