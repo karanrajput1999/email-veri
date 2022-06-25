@@ -11,6 +11,7 @@ class UserControllers {
         this.registerGet = this.registerGet.bind(this);
         this.loginPost = this.loginPost.bind(this);
         this.alreadyLoggedIn = this.alreadyLoggedIn.bind(this);
+        this.sendMailController = this.sendMailController.bind(this);
         // console.log("UserControllers", this);
     }
     async sendMailController({ emailAddress }) {
