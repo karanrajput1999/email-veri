@@ -1,9 +1,13 @@
 const express = require("express");
-const router = express.Router();
-const { loginRequired } = require("../config/JWT");
+const dashboardRouter = express.Router();
+const { authenticateUser } = require("../Middlewares/Auth");
 
-router.get("/", loginRequired, (req, res) => {
-  res.render("dashboard");
+dashboardRouter.get("/", (req, res) => {
+    res.render("home");
 });
 
-module.exports = router;
+dashboardRouter.get("/dashboard", authenticateUser, (req, res) => {
+    res.render("dashboard");
+});
+
+module.exports = dashboardRouter;

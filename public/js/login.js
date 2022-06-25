@@ -8,7 +8,7 @@ async function loginUser(event) {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
-  await fetch("/login", {
+  await fetch("/user/login", {
     method: "POST",
     headers: {
       "content-type": "application/json",

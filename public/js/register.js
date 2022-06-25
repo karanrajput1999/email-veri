@@ -8,7 +8,7 @@ async function registerUser(event) {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
-  await fetch("/register", {
+  await fetch("/user/register", {
     method: "POST",
     headers: {
       "content-type": "application/json",
@@ -21,5 +21,5 @@ async function registerUser(event) {
   }).then((res) => {
     res.json();
   });
-  location.href = "/login";
+  location.href = "/user/login";
 }
